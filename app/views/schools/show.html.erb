@@ -1,19 +1,28 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col l6 offset-l3 m8 offset-m2 s10 offset-s1">
+    <div class="card white">
+      <div class="card-content black-text">
+        <span class="card-title black-text">Carrera</span>
+			<p>
+			  <strong>Facultad:</strong>
+			  <%= @school.faculty %>
+			</p>
 
-<p>
-  <strong>Facultad:</strong>
-  <%= @school.faculty %>
-</p>
+			<p>
+			  <strong>Cod.:</strong>
+			  <%= @school.cod %>
+			</p>
 
-<p>
-  <strong>Cod.:</strong>
-  <%= @school.cod %>
-</p>
-
-<p>
-  <strong>Carrera:</strong>
-  <%= @school.name %>
-</p>
-
-<%= link_to 'Editar', edit_school_path(@school) %> |
-<%= link_to 'Volver', schools_path %>
+			<p>
+			  <strong>Carrera:</strong>
+			  <%= @school.name %>
+			</p>
+	  </div>
+      <div class="card-action">
+		<%= link_to 'Editar', edit_school_path(@school) %> |
+		<%= link_to 'Volver', schools_path %>
+	  </div>
+    </div>
+  </div>
+</div>

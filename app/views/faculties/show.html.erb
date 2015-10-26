@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Cod.:</strong>
-  <%= @faculty.cod %>
-</p>
-
-<p>
-  <strong>Facultad:</strong>
-  <%= @faculty.name %>
-</p>
-
-<%= link_to 'Editar', edit_faculty_path(@faculty) %> |
-<%= link_to 'Volver', faculties_path %>
+<div class="row">
+  <div class="col l6 offset-l3 m8 offset-m2 s10 offset-s1">
+    <div class="card white">
+      <div class="card-content black-text">
+        <span class="card-title black-text">Facultad</span>
+			<p>
+			  <strong>Cod.:</strong>
+			  <%= @faculty.cod %>
+			</p>
+			
+			<p>
+			  <strong>Facultad:</strong>
+			  <%= @faculty.name %>
+			</p>
+	  </div>
+      <div class="card-action">
+		<%= link_to 'Editar', edit_faculty_path(@faculty) %> |
+		<%= link_to 'Volver', faculties_path %>
+	  </div>
+    </div>
+  </div>
+</div>

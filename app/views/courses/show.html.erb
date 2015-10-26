@@ -1,34 +1,43 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col l6 offset-l3 m8 offset-m2 s10 offset-s1">
+    <div class="card white">
+      <div class="card-content black-text">
+        <span class="card-title black-text">Ramo</span>
+          <p>
+            <strong>Carrera:</strong>
+            <%= @course.school %>
+          </p>
 
-<p>
-  <strong>Carrera:</strong>
-  <%= @course.school %>
-</p>
+          <p>
+            <strong>Cod.:</strong>
+            <%= @course.cod %>
+          </p>
 
-<p>
-  <strong>Cod.:</strong>
-  <%= @course.cod %>
-</p>
+          <p>
+            <strong>Ramo:</strong>
+            <%= @course.name %>
+          </p>
 
-<p>
-  <strong>Ramo:</strong>
-  <%= @course.name %>
-</p>
+          <p>
+            <strong>Tipo:</strong>
+            <%= @course.kind %>
+          </p>
 
-<p>
-  <strong>Tipo:</strong>
-  <%= @course.kind %>
-</p>
+          <p>
+            <strong>Dificultad:</strong>
+            <%= @course.difficulty %>
+          </p>
 
-<p>
-  <strong>Dificultad:</strong>
-  <%= @course.difficulty %>
-</p>
-
-<p>
-  <strong>Descripción:</strong>
-  <%= @course.description %>
-</p>
-
-<%= link_to 'Editar', edit_course_path(@course) %> |
-<%= link_to 'Volver', courses_path %>
+          <p>
+            <strong>Descripción:</strong>
+            <%= @course.description %>
+          </p>
+    </div>
+      <div class="card-action">
+        <%= link_to 'Editar', edit_course_path(@course) %> |
+        <%= link_to 'Volver', courses_path %>
+    </div>
+    </div>
+  </div>
+</div>

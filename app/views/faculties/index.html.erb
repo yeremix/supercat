@@ -1,27 +1,32 @@
 <%= render 'navbar' %>
 <p id="notice"><%= notice %></p>
 
-  <h1>Facultades 
-  <%= link_to '+', new_faculty_path,class: 'waves-effect waves-light btn-floating btn-large green darken-1' %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col l12"> 
+      <h1>Facultades 
+      <%= link_to '+', new_faculty_path,class: 'waves-effect waves-light btn-floating btn-large green darken-1' %></h1>
+      <table class="centered striped responsive-table">
+        <thead>
+          <tr>
+            <th>Cod.</th>
+            <th>Facultad</th>
+            <th colspan="3">Acciones</th>
+          </tr>
+        </thead>
 
-<table class="centered striped responsive-table">
-  <thead>
-    <tr>
-      <th>Cod.</th>
-      <th>Facultad</th>
-      <th colspan="3">Acciones</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @faculties.each do |faculty| %>
-      <tr>
-        <td><%= faculty.cod %></td>
-        <td><%= faculty.name %></td>
-        <td><%= link_to 'Ver', faculty,class: 'btn black'%></td>
-        <td><%= link_to 'Editar', edit_faculty_path(faculty),class: 'btn black'%></td>
-        <td><%= button_to 'Eliminar', faculty, :method => :delete,class: 'btn red'%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @faculties.each do |faculty| %>
+            <tr>
+              <td><%= faculty.cod %></td>
+              <td><%= faculty.name %></td>
+              <td><%= link_to 'Ver', faculty,class: 'btn black'%></td>
+              <td><%= link_to 'Editar', edit_faculty_path(faculty),class: 'btn black'%></td>
+              <td><%= button_to 'Eliminar', faculty, :method => :delete,class: 'btn red'%></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

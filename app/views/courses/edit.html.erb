@@ -1,6 +1,11 @@
-<h1>Editing Course</h1>
+<h1 class="center-align">Editar carrera</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Ver', @course %> |
-<%= link_to 'Volver', courses_path %>
+<div class="row">
+    <div class="col l6 offset-l3 m8 offset-m2 s10 offset-s1">
+        <div class="card-panel white">
+			<%= render 'form' %>
+			<%= link_to 'Ver', @course %> |
+			<%= link_to 'Volver', courses_path %>
+ 		</div>
+    </div>
+</div>
