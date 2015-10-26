@@ -1,17 +1,18 @@
+<%= render 'navbar' %>
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Courses</h1>
+<h1>Ramos</h1>
 
 <table>
   <thead>
     <tr>
-      <th>School</th>
-      <th>Cod</th>
-      <th>Name</th>
-      <th>Kind</th>
-      <th>Difficulty</th>
-      <th>Description</th>
-      <th colspan="3"></th>
+      <th>Carrera</th>
+      <th>Cod.</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Dificultad</th>
+      <th>Descripción</th>
+      <th colspan="3">Acciones</th>
     </tr>
   </thead>
 
@@ -24,9 +25,9 @@
         <td><%= course.kind %></td>
         <td><%= course.difficulty %></td>
         <td><%= course.description %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', course,class: 'btn black'%></td>
+        <td><%= link_to 'Editar', edit_course_path(course),class: 'btn black'%></td>
+        <td><%= button_to 'Eliminar', course, :method => :delete,class: 'btn red'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Course', new_course_path %>
+<%= link_to 'Nuevo ramo', new_course_path %>
