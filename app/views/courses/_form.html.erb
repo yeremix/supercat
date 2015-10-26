@@ -11,10 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :school_id %><br>
-    <%= f.text_field :school_id %>
-  </div>
+    <% @schools = School.all%>
+  <%= f.label "Carrera" %><br>
+  <select name="course[school_id]" class="browser-default">
+    <% @schools.each do |school| %>
+      <option value="<%=school.id%>"><%=school.id%> - <%=school.name%></option>
+    <% end %>
+  </select><br>
   <div class="field">
     <%= f.label :cod %><br>
     <%= f.number_field :cod %>
