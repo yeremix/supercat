@@ -1,9 +1,10 @@
 <%= render 'navbar' %>
 <p id="notice"><%= notice %></p>
 
-<h1>Ramos</h1>
+  <h1>Ramos
+  <%= link_to '+', new_course_path,class: 'waves-effect waves-light btn-floating btn-large green darken-1' %></h1>
 
-<table>
+<table class="centered striped responsive-table">
   <thead>
     <tr>
       <th>Carrera</th>
@@ -32,7 +33,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Nuevo ramo', new_course_path %>

@@ -21,3 +21,14 @@
 
 en:
   hello: "Hello world"
+  helpers:
+    submit:
+      school:
+        create: "Crear carrera"
+        update: "Actualizar carrera"
+      faculty:
+        create: "Crear facultad"        
+        update: "Actualizar facultad"
+      course:
+        create: "Crear ramo"        
+        update: "Actualizar ramo"
