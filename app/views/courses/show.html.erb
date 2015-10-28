@@ -1,4 +1,69 @@
+  <div class="section blue-grey darken-1" style="background:#00ccff;color:white">
+    <h4><b>&nbsp RAMO:</b> <%= @course.name %></h4>
+    <p><b>&nbsp&nbsp&nbsp&nbsp CARRERA:</b> <%= @course.school.name %> </p>
+    <p><b>&nbsp&nbsp&nbsp&nbsp Cod.: <%= @course.cod %> <b>|</b> 
+      <% if @course.kind==1 %>
+        CATEDRA
+      <% elsif @course.kind==2 %>
+        LABORATORIO
+      <% end %>
+    </p></b>
+  </div>
+<div class="divider"></div>
+
 <p id="notice"><%= notice %></p>
+
+<div class="container" style="width:80%;">
+  <div class="row">
+      <div class="col l6">
+        <h5><b>Descripción</b></h5>
+          <p class="light" align="justify">El ramo es bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+      </div>
+      <div class="col l6">
+        <h5><b>Dificultad</b></h5>
+        
+        <div id="chart"></div>
+  
+        <script id="jsbin-javascript">
+          var chart = c3.generate({
+            data: {
+              columns: [
+                  ['Muy facil', 10],
+                  ['Facil', 20],
+                  ['Normal', 60],
+                  ['Dificil', 40],
+                  ['Muy dificil', 80]
+              ],
+              type : 'pie',
+                onclick: function (d, i) { console.log("onclick", d, i); },
+                onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+                onmouseout: function (d, i) { console.log("onmouseout", d, i); },
+              colors: {
+                  'Muy facil': '#00ff00',
+                  'Facil': '#ADFF2F',
+                  'Normal': '#FFFF00',
+                  'Dificil': '#FF8C00',
+                  'Muy dificil': '#FF0000 '
+              }
+            }
+          });
+        </script>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="row">
   <div class="col l6 offset-l3 m8 offset-m2 s10 offset-s1">
     <div class="card white">
