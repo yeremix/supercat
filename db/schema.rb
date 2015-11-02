@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20151025205623) do
     t.integer  "cod"
     t.string   "name"
     t.integer  "kind"
-    t.integer  "difficulty"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

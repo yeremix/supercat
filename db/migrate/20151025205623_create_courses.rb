@@ -5,7 +5,6 @@ class CreateCourses < ActiveRecord::Migration
       t.integer :cod
       t.string :name
       t.integer :kind
-      t.integer :difficulty
       t.text :description
 
       t.timestamps null: false
